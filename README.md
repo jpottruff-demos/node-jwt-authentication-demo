@@ -11,3 +11,14 @@ Small app that illustrates how JSON Web Tokens can be used to guard routes in an
 ## Other Tools / Misc.
 - Postman
 - [gitignore template](https://github.com/github/gitignore/blob/master/Node.gitignore)
+
+## To run:
+`npm run dev`
+
+## Postman Requests
+1. Fire the login request to get the JSON Web Token
+2. Setup the *Access Posts Route (Valid)* request with an *Authorization* header that contains the token
+
+**Format:**
+
+Authorization: Bearer `<access_token>`

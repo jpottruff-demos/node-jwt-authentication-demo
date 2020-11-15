@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "1f6baae8-7e9a-4b36-9e5d-3ce58b3fa2eb",
+		"name": "node-jwt-authentication-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Recieves a token for a mock user. \r\n\r\nNOTE: the token received would generally be stored in localstorage by your front end\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Access Posts Route (Invalid - No Token)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Access Posts Route (Valid - Inlcudes token)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				},
+				"description": "Inlcudes the token generated from login (NOTE - must fire the login request and copy/paste the data)"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
